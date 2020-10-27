@@ -5,4 +5,5 @@ CPP    = g++
 CFLAGS = $(DBG) $(OPT) $(INCDIR)
 LINK   = -lm 
 
-.cpp.o
+.cpp.o:
+	$(CPP) $(CFLAGS) -c $
