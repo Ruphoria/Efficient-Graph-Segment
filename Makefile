@@ -6,4 +6,6 @@ CFLAGS = $(DBG) $(OPT) $(INCDIR)
 LINK   = -lm 
 
 .cpp.o:
-	$(CPP) $(CFLAGS) -c $
+	$(CPP) $(CFLAGS) -c $< -o $@
+
+all: segment
