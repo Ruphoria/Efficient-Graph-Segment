@@ -9,3 +9,5 @@ LINK   = -lm
 	$(CPP) $(CFLAGS) -c $< -o $@
 
 all: segment
+
+segment: segment.cpp segment
