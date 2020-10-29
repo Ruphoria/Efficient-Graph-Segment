@@ -10,4 +10,5 @@ LINK   = -lm
 
 all: segment
 
-segment: segment.cpp segment-image.h segment-graph.h disj
+segment: segment.cpp segment-image.h segment-graph.h disjoint-set.h
+	$(CPP) $(
