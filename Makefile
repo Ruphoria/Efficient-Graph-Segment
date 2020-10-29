@@ -10,4 +10,4 @@ LINK   = -lm
 
 all: segment
 
-segment: segment.cpp segment
+segment: segment.cpp segment-image.h segment-graph.h disj
