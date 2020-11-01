@@ -16,4 +16,5 @@ segment: segment.cpp segment-image.h segment-graph.h disjoint-set.h
 clean:
 	/bin/rm -f segment *.o
 
-cle
+clean-all: clean
+	/bin/rm -
