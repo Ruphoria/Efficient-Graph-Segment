@@ -14,4 +14,6 @@ segment: segment.cpp segment-image.h segment-graph.h disjoint-set.h
 	$(CPP) $(CFLAGS) -o segment segment.cpp $(LINK)
 
 clean:
-	/bin/rm
+	/bin/rm -f segment *.o
+
+cle
