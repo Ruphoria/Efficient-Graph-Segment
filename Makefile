@@ -17,4 +17,7 @@ clean:
 	/bin/rm -f segment *.o
 
 clean-all: clean
-	/bin/rm -
+	/bin/rm -f *~ 
+
+
+
