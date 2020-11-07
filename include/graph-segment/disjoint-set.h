@@ -21,3 +21,36 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 #define DISJOINT_SET
 
 // disjoint-set forests using union-by-rank and path compression (sort of).
+
+typedef struct {
+  int rank;
+  int p;
+  int size;
+} uni_elt;
+
+class universe {
+public:
+  universe(int elements);
+  ~universe();
+  int find(int x);  
+  void join(int x, int y);
+  int size(int x) const { return elts[x].size; }
+  int num_sets() const { return num; }
+
+private:
+  uni_elt *elts;
+  int num;
+};
+
+universe::universe(int elements) {
+  elts = new uni_elt[elements];
+  num = elements;
+  for (int i = 0; i < elements; i++) {
+    elts[i].rank = 0;
+    elts[i].size = 1;
+    elts[i].p = i;
+  }
+}
+  
+universe::~universe() {
+  delete [] elts;
