@@ -54,3 +54,22 @@ universe::universe(int elements) {
   
 universe::~universe() {
   delete [] elts;
+}
+
+int universe::find(int x) {
+  int y = x;
+  while (y != elts[y].p)
+    y = elts[y].p;
+  elts[x].p = y;
+  return y;
+}
+
+void universe::join(int x, int y) {
+  if (elts[x].rank > elts[y].rank) {
+    elts[y].p = x;
+    elts[x].size += elts[y].size;
+  } else {
+    elts[x].p = y;
+    elts[y].size += elts[x].size;
+    if (elts[x].rank == elts[y].rank)
+      elts[y].rank++;
