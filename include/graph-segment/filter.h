@@ -16,3 +16,30 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 */
+
+/* simple filters */
+
+#ifndef FILTER_H
+#define FILTER_H
+
+#include <vector>
+#include <cmath>
+#include "image.h"
+#include "misc.h"
+#include "convolve.h"
+#include "imconv.h"
+
+#define WIDTH 4.0
+
+/* normalize mask so it integrates to one */
+static void normalize(std::vector<float> &mask) {
+  int len = mask.size();
+  float sum = 0;
+  for (int i = 1; i < len; i++) {
+    sum += fabs(mask[i]);
+  }
+  sum = 2*sum + fabs(mask[0]);
+  for (int i = 0; i < len; i++) {
+    mask[i] /= sum;
+  }
+}
