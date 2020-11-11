@@ -43,3 +43,27 @@ static void normalize(std::vector<float> &mask) {
     mask[i] /= sum;
   }
 }
+
+/* make filters */
+#define MAKE_FILTER(name, fun)                                \
+static std::vector<float> make_ ## name (float sigma) {       \
+  sigma = std::max(sigma, 0.01F);			      \
+  int len = (int)ceil(sigma * WIDTH) + 1;                     \
+  std::vector<float> mask(len);                               \
+  for (int i = 0; i < len; i++) {                             \
+    mask[i] = fun;                                            \
+  }                                                           \
+  return mask;                                                \
+}
+
+MAKE_FILTER(fgauss, exp(-0.5*square(i/sigma)));
+
+/* convolve image with gaussian filter */
+static image<float> *smooth(image<float> *src, float sigma) {
+  std::vector<float> mask = make_fgauss(sigma);
+  normalize(mask);
+
+  image<float> *tmp = new image<float>(src->height(), src->width(), false);
+  image<float> *dst = new image<float>(src->width(), src->height(), false);
+  convolve_even(src, tmp, mask);
+  convolve_even(tmp, dst, mask);
