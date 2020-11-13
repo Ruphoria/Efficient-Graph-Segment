@@ -25,3 +25,23 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 #include <cstring>
 
 template <class T>
+class image {
+ public:
+  /* create an image */
+  image(const int width, const int height, const bool init = true);
+
+  /* delete an image */
+  ~image();
+
+  /* init an image */
+  void init(const T &val);
+
+  /* copy an image */
+  image<T> *copy() const;
+  
+  /* get the width of an image. */
+  int width() const { return w; }
+  
+  /* get the height of an image. */
+  int height() const { return h; }
+  
