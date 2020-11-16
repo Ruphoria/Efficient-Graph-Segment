@@ -45,3 +45,22 @@ class image {
   /* get the height of an image. */
   int height() const { return h; }
   
+  /* image data. */
+  T *data;
+  
+  /* row pointers. */
+  T **access;
+  
+ private:
+  int w, h;
+};
+
+/* use imRef to access image data. */
+#define imRef(im, x, y) (im->access[y][x])
+  
+/* use imPtr to get pointer to image data. */
+#define imPtr(im, x, y) &(im->access[y][x])
+
+template <class T>
+image<T>::image(const int width, const int height, const bool init) {
+  w = width;
