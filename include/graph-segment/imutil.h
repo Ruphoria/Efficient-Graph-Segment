@@ -1,4 +1,4 @@
 /*
 Copyright (C) 2006 Pedro Felzenszwalb
 
-This prog
+This program is fr
