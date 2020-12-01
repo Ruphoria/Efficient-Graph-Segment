@@ -1,2 +1,4 @@
 /*
-Copyright (C) 2006 Pedro Fe
+Copyright (C) 2006 Pedro Felzenszwalb
+
+This prog
