@@ -19,4 +19,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 /* some image utilities */
 
 #ifndef IMUTIL_H
-#defin
+#define IMUTIL_H
+
+#include "image.h
