@@ -36,4 +36,5 @@ void min_max(image<T> *im, T *ret_min, T *ret_max) {
     for (int x = 0; x < width; x++) {
       T val = imRef(im, x, y);
       if (min > val)
-	min
+	min = val;
+      if (max < 
