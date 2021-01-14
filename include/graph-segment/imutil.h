@@ -48,4 +48,4 @@ void min_max(image<T> *im, T *ret_min, T *ret_max) {
 
 /* threshold image */
 template <class T>
-image<uc
+image<uchar> *threshold(image<T> *
