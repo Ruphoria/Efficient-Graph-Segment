@@ -51,4 +51,4 @@ template <class T>
 image<uchar> *threshold(image<T> *src, int t) {
   int width = src->width();
   int height = src->height();
-  image<uchar> *dst = 
+  image<uchar> *dst = new image<uchar>(width, height
