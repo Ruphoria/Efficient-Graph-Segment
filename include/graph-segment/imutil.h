@@ -61,3 +61,6 @@ image<uchar> *threshold(image<T> *src, int t) {
 
   return dst;
 }
+
+#endif
+
