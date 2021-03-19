@@ -26,3 +26,5 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 #ifndef M_PI
 #define M_PI 3.141592653589793
 #endif
+
+typedef unsigned char
