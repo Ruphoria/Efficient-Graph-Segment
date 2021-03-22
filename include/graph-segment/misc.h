@@ -31,4 +31,5 @@ typedef unsigned char uchar;
 
 typedef struct { uchar r, g, b; } rgb;
 
-inline bool operator==
+inline bool operator==(const rgb &a, const rgb &b) {
+ 
