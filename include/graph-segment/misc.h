@@ -36,4 +36,6 @@ inline bool operator==(const rgb &a, const rgb &b) {
 }
 
 template <class T>
-inline T abs(const T &x) { return (x > 
+inline T abs(const T &x) { return (x > 0 ? x : -x); };
+
+template <cla
