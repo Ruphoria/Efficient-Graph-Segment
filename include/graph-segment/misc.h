@@ -39,4 +39,4 @@ template <class T>
 inline T abs(const T &x) { return (x > 0 ? x : -x); };
 
 template <class T>
-inline int sign(const T &x) 
+inline int sign(const T &x) { return (x >= 0 ? 1 : -1); }
