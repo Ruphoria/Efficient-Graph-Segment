@@ -42,4 +42,6 @@ template <class T>
 inline int sign(const T &x) { return (x >= 0 ? 1 : -1); };
 
 template <class T>
-inline T square(const T &x) {
+inline T square(const T &x) { return x*x; };
+
+template <clas
