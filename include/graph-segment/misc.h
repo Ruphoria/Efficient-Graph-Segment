@@ -46,4 +46,6 @@ inline T square(const T &x) { return x*x; };
 
 template <class T>
 inline T bound(const T &x, const T &min, const T &max) {
-  return (x < min ? min : (x 
+  return (x < min ? min : (x > max ? max : x));
+}
+
