@@ -49,3 +49,4 @@ inline T bound(const T &x, const T &min, const T &max) {
   return (x < min ? min : (x > max ? max : x));
 }
 
+template <class T
