@@ -50,4 +50,4 @@ inline T bound(const T &x, const T &min, const T &max) {
 }
 
 template <class T>
-inline bool check_bound(const T 
+inline bool check_bound(const T &x, const T&min, const T &ma
