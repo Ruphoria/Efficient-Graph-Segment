@@ -51,4 +51,7 @@ inline T bound(const T &x, const T &min, const T &max) {
 
 template <class T>
 inline bool check_bound(const T &x, const T&min, const T &max) {
-  return ((x < min) || (x > m
+  return ((x < min) || (x > max));
+}
+
+inline int vl
