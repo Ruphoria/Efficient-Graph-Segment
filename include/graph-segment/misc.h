@@ -56,4 +56,4 @@ inline bool check_bound(const T &x, const T&min, const T &max) {
 
 inline int vlib_round(float x) { return (int)(x + 0.5F); }
 
-inline int vlib_round(do
+inline int vlib_round(double x) { return (int)(x + 0.5); }
