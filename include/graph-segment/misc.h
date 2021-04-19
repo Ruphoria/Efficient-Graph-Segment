@@ -58,4 +58,4 @@ inline int vlib_round(float x) { return (int)(x + 0.5F); }
 
 inline int vlib_round(double x) { return (int)(x + 0.5); }
 
-inline double gaussi
+inline double gaussian(double val, double s
