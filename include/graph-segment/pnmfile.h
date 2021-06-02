@@ -22,4 +22,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 #define PNM_FILE_H
 
 #include <cstdlib>
-#include <climi
+#include <climits>
+#include <cstring>
+#in
