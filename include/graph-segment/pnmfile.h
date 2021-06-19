@@ -35,4 +35,5 @@ class pnm_error { };
 static void read_packed(unsigned char *data, int size, std::ifstream &f) {
   unsigned char c = 0;
   
-  int bitshift 
+  int bitshift = -1;
+  for (int pos = 
