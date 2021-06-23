@@ -39,4 +39,6 @@ static void read_packed(unsigned char *data, int size, std::ifstream &f) {
   for (int pos = 0; pos < size; pos++) {
     if (bitshift == -1) {
       c = f.get();
-      bi
+      bitshift = 7;
+    }
+    data[
