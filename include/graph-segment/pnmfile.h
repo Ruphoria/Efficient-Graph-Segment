@@ -41,4 +41,5 @@ static void read_packed(unsigned char *data, int size, std::ifstream &f) {
       c = f.get();
       bitshift = 7;
     }
-    data[pos] = (c >> bitsh
+    data[pos] = (c >> bitshift) & 1;
+    bits
