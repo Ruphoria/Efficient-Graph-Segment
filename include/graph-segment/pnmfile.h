@@ -42,4 +42,8 @@ static void read_packed(unsigned char *data, int size, std::ifstream &f) {
       bitshift = 7;
     }
     data[pos] = (c >> bitshift) & 1;
-    bits
+    bitshift--;
+    }
+}
+
+static v
