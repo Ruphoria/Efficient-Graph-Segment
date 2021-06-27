@@ -46,4 +46,4 @@ static void read_packed(unsigned char *data, int size, std::ifstream &f) {
     }
 }
 
-static void write_packed(unsi
+static void write_packed(unsigned char *data, int si
