@@ -48,4 +48,6 @@ static void read_packed(unsigned char *data, int size, std::ifstream &f) {
 
 static void write_packed(unsigned char *data, int size, std::ofstream &f) {
   unsigned char c = 0;
- 
+  
+  int bitshift = 7;
+  fo
