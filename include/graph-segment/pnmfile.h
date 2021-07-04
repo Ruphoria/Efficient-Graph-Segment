@@ -50,4 +50,5 @@ static void write_packed(unsigned char *data, int size, std::ofstream &f) {
   unsigned char c = 0;
   
   int bitshift = 7;
-  for (int pos = 0; pos
+  for (int pos = 0; pos < size; pos++) {
+      
