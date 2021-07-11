@@ -57,3 +57,8 @@ static void write_packed(unsigned char *data, int size, std::ofstream &f) {
 	f.put(c);
 	bitshift = 7;
 	c = 0;
+      }
+  }
+}
+
+/* read 
