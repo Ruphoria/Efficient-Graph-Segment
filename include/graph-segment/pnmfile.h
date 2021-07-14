@@ -61,4 +61,5 @@ static void write_packed(unsigned char *data, int size, std::ofstream &f) {
   }
 }
 
-/* read PNM field, skipping comment
+/* read PNM field, skipping comments */ 
+static void pnm_read
