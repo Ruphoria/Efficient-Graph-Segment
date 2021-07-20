@@ -67,4 +67,5 @@ static void pnm_read(std::ifstream &file, char *buf) {
   char c;
   
   file >> c;
-  whil
+  while (c == '#') {
+    file.
