@@ -68,4 +68,5 @@ static void pnm_read(std::ifstream &file, char *buf) {
   
   file >> c;
   while (c == '#') {
-    file.
+    file.getline(doc, BUF_SIZE);
+ 
