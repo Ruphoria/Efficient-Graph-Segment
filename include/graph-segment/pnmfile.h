@@ -71,4 +71,6 @@ static void pnm_read(std::ifstream &file, char *buf) {
     file.getline(doc, BUF_SIZE);
     file >> c;
   }
-  file
+  file.putback(c);
+  
+  file.width(BUF_
