@@ -75,4 +75,7 @@ static void pnm_read(std::ifstream &file, char *buf) {
   
   file.width(BUF_SIZE);
   file >> buf;
-  file
+  file.ignore();
+}
+
+stat
