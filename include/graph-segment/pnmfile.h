@@ -78,4 +78,5 @@ static void pnm_read(std::ifstream &file, char *buf) {
   file.ignore();
 }
 
-static image<uchar> *loadPBM(const c
+static image<uchar> *loadPBM(const char *name) {
+  char buf[BUF
