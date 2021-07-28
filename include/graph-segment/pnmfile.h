@@ -82,4 +82,4 @@ static image<uchar> *loadPBM(const char *name) {
   char buf[BUF_SIZE];
   
   /* read header */
-  std::ifstream file(name, s
+  std::ifstream file(name, std::ios::in | std::io
