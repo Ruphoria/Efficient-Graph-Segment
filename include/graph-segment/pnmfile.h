@@ -83,4 +83,5 @@ static image<uchar> *loadPBM(const char *name) {
   
   /* read header */
   std::ifstream file(name, std::ios::in | std::ios::binary);
-  pnm_read
+  pnm_read(file, buf);
+  if (s
