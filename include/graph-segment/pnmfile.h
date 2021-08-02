@@ -85,3 +85,4 @@ static image<uchar> *loadPBM(const char *name) {
   std::ifstream file(name, std::ios::in | std::ios::binary);
   pnm_read(file, buf);
   if (strncmp(buf, "P4", 2))
+    throw pnm_error();
