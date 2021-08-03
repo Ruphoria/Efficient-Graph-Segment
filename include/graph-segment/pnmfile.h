@@ -87,4 +87,5 @@ static image<uchar> *loadPBM(const char *name) {
   if (strncmp(buf, "P4", 2))
     throw pnm_error();
     
-  pnm_read(file, bu
+  pnm_read(file, buf);
+  int width = atoi(bu
