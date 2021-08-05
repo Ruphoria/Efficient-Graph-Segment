@@ -92,3 +92,5 @@ static image<uchar> *loadPBM(const char *name) {
   pnm_read(file, buf);
   int height = atoi(buf);
   
+  /* read data */
+  image
