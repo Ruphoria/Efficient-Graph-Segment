@@ -93,4 +93,4 @@ static image<uchar> *loadPBM(const char *name) {
   int height = atoi(buf);
   
   /* read data */
-  image<uchar> *im = new image<u
+  image<uchar> *im = new image<uchar>(width, height
