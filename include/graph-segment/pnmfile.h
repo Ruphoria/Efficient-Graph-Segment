@@ -95,4 +95,6 @@ static image<uchar> *loadPBM(const char *name) {
   /* read data */
   image<uchar> *im = new image<uchar>(width, height);
   for (int i = 0; i < height; i++)
-    read_packed(imPtr(im, 0, i), wi
+    read_packed(imPtr(im, 0, i), width, file);
+  
+  return
