@@ -100,4 +100,4 @@ static image<uchar> *loadPBM(const char *name) {
   return im;
 }
 
-static void sa
+static void savePBM(image<uchar> *im, con
