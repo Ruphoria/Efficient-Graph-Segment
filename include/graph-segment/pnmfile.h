@@ -101,4 +101,5 @@ static image<uchar> *loadPBM(const char *name) {
 }
 
 static void savePBM(image<uchar> *im, const char *name) {
-  int width = 
+  int width = im->width();
+  int height
