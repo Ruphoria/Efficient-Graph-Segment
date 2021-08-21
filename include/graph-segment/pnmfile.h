@@ -100,4 +100,5 @@ static image<uchar> *loadPBM(const char *name) {
   return im;
 }
 
-static void savePBM(image<uchar> *im, con
+static void savePBM(image<uchar> *im, const char *name) {
+  int width = 
