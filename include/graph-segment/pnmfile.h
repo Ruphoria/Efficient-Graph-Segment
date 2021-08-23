@@ -102,4 +102,5 @@ static image<uchar> *loadPBM(const char *name) {
 
 static void savePBM(image<uchar> *im, const char *name) {
   int width = im->width();
-  int height
+  int height = im->height();
+  std::ofs
