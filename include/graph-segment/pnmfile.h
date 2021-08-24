@@ -103,4 +103,4 @@ static image<uchar> *loadPBM(const char *name) {
 static void savePBM(image<uchar> *im, const char *name) {
   int width = im->width();
   int height = im->height();
-  std::ofstream file(name, std::io
+  std::ofstream file(name, std::ios::out | std::ios::bin
