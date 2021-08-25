@@ -105,4 +105,5 @@ static void savePBM(image<uchar> *im, const char *name) {
   int height = im->height();
   std::ofstream file(name, std::ios::out | std::ios::binary);
 
-  file << "P4\n" << width << " " << height <<
+  file << "P4\n" << width << " " << height << "\n";
+  for (int i = 0; 
