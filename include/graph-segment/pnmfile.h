@@ -107,4 +107,4 @@ static void savePBM(image<uchar> *im, const char *name) {
 
   file << "P4\n" << width << " " << height << "\n";
   for (int i = 0; i < height; i++)
-    w
+    write_packed(imPtr(im, 0, i), 
