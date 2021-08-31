@@ -110,4 +110,5 @@ static void savePBM(image<uchar> *im, const char *name) {
     write_packed(imPtr(im, 0, i), width, file);
 }
 
-static image<uchar> *loadPGM(const char *name)
+static image<uchar> *loadPGM(const char *name) {
+  char buf[BUF_SIZE
