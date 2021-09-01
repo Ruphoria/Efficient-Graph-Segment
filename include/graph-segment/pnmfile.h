@@ -111,4 +111,7 @@ static void savePBM(image<uchar> *im, const char *name) {
 }
 
 static image<uchar> *loadPGM(const char *name) {
-  char buf[BUF_SIZE
+  char buf[BUF_SIZE];
+  
+  /* read header */
+  std:
