@@ -114,4 +114,4 @@ static image<uchar> *loadPGM(const char *name) {
   char buf[BUF_SIZE];
   
   /* read header */
-  std:
+  std::ifstream file(name, std::io
