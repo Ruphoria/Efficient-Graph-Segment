@@ -114,4 +114,5 @@ static image<uchar> *loadPGM(const char *name) {
   char buf[BUF_SIZE];
   
   /* read header */
-  std::ifstream file(name, std::ios::in | std::ios::binar
+  std::ifstream file(name, std::ios::in | std::ios::binary);
+  pnm_read(file, b
