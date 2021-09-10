@@ -117,4 +117,7 @@ static image<uchar> *loadPGM(const char *name) {
   std::ifstream file(name, std::ios::in | std::ios::binary);
   pnm_read(file, buf);
   if (strncmp(buf, "P5", 2))
-    throw pnm_error
+    throw pnm_error();
+
+  pnm_read(file, buf);
+  i
