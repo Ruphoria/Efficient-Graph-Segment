@@ -122,4 +122,6 @@ static image<uchar> *loadPGM(const char *name) {
   pnm_read(file, buf);
   int width = atoi(buf);
   pnm_read(file, buf);
-  in
+  int height = atoi(buf);
+
+  pnm
