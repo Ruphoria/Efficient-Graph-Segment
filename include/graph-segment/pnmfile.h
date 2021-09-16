@@ -125,4 +125,4 @@ static image<uchar> *loadPGM(const char *name) {
   int height = atoi(buf);
 
   pnm_read(file, buf);
-  if (a
+  if (atoi(buf) > UCHAR
