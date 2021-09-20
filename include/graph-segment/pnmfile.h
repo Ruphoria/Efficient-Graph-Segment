@@ -128,4 +128,5 @@ static image<uchar> *loadPGM(const char *name) {
   if (atoi(buf) > UCHAR_MAX)
     throw pnm_error();
 
-  
+  /* read data */
+  ima
