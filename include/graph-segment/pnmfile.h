@@ -129,4 +129,4 @@ static image<uchar> *loadPGM(const char *name) {
     throw pnm_error();
 
   /* read data */
-  ima
+  image<uchar> *im = new imag
