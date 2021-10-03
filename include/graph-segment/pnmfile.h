@@ -130,4 +130,4 @@ static image<uchar> *loadPGM(const char *name) {
 
   /* read data */
   image<uchar> *im = new image<uchar>(width, height);
-  file.read((char *)imPtr(im, 0, 0), width * h
+  file.read((char *)imPtr(im, 0, 0), width * height * sizeof(uch
