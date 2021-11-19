@@ -135,4 +135,4 @@ static image<uchar> *loadPGM(const char *name) {
   return im;
 }
 
-stat
+static void savePGM(im
