@@ -140,4 +140,4 @@ static void savePGM(image<uchar> *im, const char *name) {
   int height = im->height();
   std::ofstream file(name, std::ios::out | std::ios::binary);
 
-  file << "P5\n" << width 
+  file << "P5\n" << width << " " << height << 
