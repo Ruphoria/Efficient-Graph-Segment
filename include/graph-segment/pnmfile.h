@@ -136,4 +136,5 @@ static image<uchar> *loadPGM(const char *name) {
 }
 
 static void savePGM(image<uchar> *im, const char *name) {
-  int width 
+  int width = im->width();
+  int hei
