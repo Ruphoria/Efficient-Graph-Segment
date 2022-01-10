@@ -138,4 +138,4 @@ static image<uchar> *loadPGM(const char *name) {
 static void savePGM(image<uchar> *im, const char *name) {
   int width = im->width();
   int height = im->height();
-  std::ofstream f
+  std::ofstream file(name, std::ios:
