@@ -144,4 +144,5 @@ static void savePGM(image<uchar> *im, const char *name) {
   file.write((char *)imPtr(im, 0, 0), width * height * sizeof(uchar));
 }
 
-static image<rgb> *loadPPM(const char *name) 
+static image<rgb> *loadPPM(const char *name) {
+  char buf[BUF_SIZE], doc[BUF
