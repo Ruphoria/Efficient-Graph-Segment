@@ -148,4 +148,4 @@ static image<rgb> *loadPPM(const char *name) {
   char buf[BUF_SIZE], doc[BUF_SIZE];
   
   /* read header */
-  std::ifstream file(na
+  std::ifstream file(name, std::ios::in | std::ios:
