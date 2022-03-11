@@ -149,4 +149,5 @@ static image<rgb> *loadPPM(const char *name) {
   
   /* read header */
   std::ifstream file(name, std::ios::in | std::ios::binary);
-  pnm_rea
+  pnm_read(file, buf);
+  if (strncmp
