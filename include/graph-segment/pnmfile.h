@@ -154,4 +154,5 @@ static image<rgb> *loadPPM(const char *name) {
     throw pnm_error();
 
   pnm_read(file, buf);
-  i
+  int width = atoi(buf);
+  pn
