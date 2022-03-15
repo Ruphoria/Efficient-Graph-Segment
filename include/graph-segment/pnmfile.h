@@ -160,4 +160,6 @@ static image<rgb> *loadPPM(const char *name) {
 
   pnm_read(file, buf);
   if (atoi(buf) > UCHAR_MAX)
-  
+    throw pnm_error();
+
+ 
