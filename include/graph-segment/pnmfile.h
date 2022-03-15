@@ -153,4 +153,5 @@ static image<rgb> *loadPPM(const char *name) {
   if (strncmp(buf, "P6", 2))
     throw pnm_error();
 
-  pn
+  pnm_read(file, buf);
+  i
