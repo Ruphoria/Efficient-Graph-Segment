@@ -159,4 +159,5 @@ static image<rgb> *loadPPM(const char *name) {
   int height = atoi(buf);
 
   pnm_read(file, buf);
-  i
+  if (atoi(buf) > UCHAR_MAX)
+  
