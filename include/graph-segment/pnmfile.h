@@ -162,4 +162,4 @@ static image<rgb> *loadPPM(const char *name) {
   if (atoi(buf) > UCHAR_MAX)
     throw pnm_error();
 
- 
+  /* read data */
