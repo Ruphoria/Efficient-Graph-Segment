@@ -164,4 +164,4 @@ static image<rgb> *loadPPM(const char *name) {
 
   /* read data */
   image<rgb> *im = new image<rgb>(width, height);
-  file.read((char *)imPtr(
+  file.read((char *)imPtr(im, 0, 0), width * hei
