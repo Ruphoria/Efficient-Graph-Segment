@@ -169,4 +169,4 @@ static image<rgb> *loadPPM(const char *name) {
   return im;
 }
 
-static void savePPM
+static void savePPM(image<rgb> *im, const char *name
