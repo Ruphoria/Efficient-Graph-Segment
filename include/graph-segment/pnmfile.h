@@ -169,4 +169,5 @@ static image<rgb> *loadPPM(const char *name) {
   return im;
 }
 
-static void savePPM(image<rgb> *im, const char *name
+static void savePPM(image<rgb> *im, const char *name) {
+  int width = im->width(
