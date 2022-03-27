@@ -171,4 +171,5 @@ static image<rgb> *loadPPM(const char *name) {
 
 static void savePPM(image<rgb> *im, const char *name) {
   int width = im->width();
-  int height
+  int height = im->height();
+  std::
