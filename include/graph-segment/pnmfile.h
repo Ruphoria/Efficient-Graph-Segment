@@ -174,4 +174,4 @@ static void savePPM(image<rgb> *im, const char *name) {
   int height = im->height();
   std::ofstream file(name, std::ios::out | std::ios::binary);
 
-  file << "P6\n" << width << 
+  file << "P6\n" << width << " " << height << "\n" <
