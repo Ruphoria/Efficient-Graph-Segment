@@ -175,4 +175,7 @@ static void savePPM(image<rgb> *im, const char *name) {
   std::ofstream file(name, std::ios::out | std::ios::binary);
 
   file << "P6\n" << width << " " << height << "\n" << UCHAR_MAX << "\n";
-  file.write((char *)imPtr(im, 0, 0), width * height * sizeof
+  file.write((char *)imPtr(im, 0, 0), width * height * sizeof(rgb));
+}
+
+template <c
