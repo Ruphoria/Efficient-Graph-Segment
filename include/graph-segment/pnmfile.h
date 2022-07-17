@@ -178,4 +178,5 @@ static void savePPM(image<rgb> *im, const char *name) {
   file.write((char *)imPtr(im, 0, 0), width * height * sizeof(rgb));
 }
 
-template <c
+template <class T>
+void load_image(i
