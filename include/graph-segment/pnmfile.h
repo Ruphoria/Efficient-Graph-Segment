@@ -179,4 +179,5 @@ static void savePPM(image<rgb> *im, const char *name) {
 }
 
 template <class T>
-void load_image(image<T> **im, const char *
+void load_image(image<T> **im, const char *name) {
+  char buf[B
