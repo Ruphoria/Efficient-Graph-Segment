@@ -182,4 +182,5 @@ template <class T>
 void load_image(image<T> **im, const char *name) {
   char buf[BUF_SIZE];
   
-  /* read
+  /* read header */
+  std::ifstrea
