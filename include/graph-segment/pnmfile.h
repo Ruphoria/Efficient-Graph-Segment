@@ -183,4 +183,5 @@ void load_image(image<T> **im, const char *name) {
   char buf[BUF_SIZE];
   
   /* read header */
-  std::ifstream file(name, std::ios::in | std
+  std::ifstream file(name, std::ios::in | std::ios::binary);
+  pnm_
