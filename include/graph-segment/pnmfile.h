@@ -186,4 +186,6 @@ void load_image(image<T> **im, const char *name) {
   std::ifstream file(name, std::ios::in | std::ios::binary);
   pnm_read(file, buf);
   if (strncmp(buf, "VLIB", 9))
-    thro
+    throw pnm_error();
+
+  pnm_read
