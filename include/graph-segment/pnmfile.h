@@ -188,4 +188,5 @@ void load_image(image<T> **im, const char *name) {
   if (strncmp(buf, "VLIB", 9))
     throw pnm_error();
 
-  pnm_read
+  pnm_read(file, buf);
+  int width
