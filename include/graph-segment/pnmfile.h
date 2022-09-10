@@ -190,4 +190,5 @@ void load_image(image<T> **im, const char *name) {
 
   pnm_read(file, buf);
   int width = atoi(buf);
-  pnm_read(
+  pnm_read(file, buf);
+  i
