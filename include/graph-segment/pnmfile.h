@@ -194,3 +194,4 @@ void load_image(image<T> **im, const char *name) {
   int height = atoi(buf);
 
   /* read data */
+  *im = new image<T>(
