@@ -195,4 +195,4 @@ void load_image(image<T> **im, const char *name) {
 
   /* read data */
   *im = new image<T>(width, height);
-  file.read((char *)imPtr((*im), 0,
+  file.read((char *)imPtr((*im), 0, 0), width * height * s
