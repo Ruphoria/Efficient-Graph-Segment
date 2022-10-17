@@ -198,3 +198,5 @@ void load_image(image<T> **im, const char *name) {
   file.read((char *)imPtr((*im), 0, 0), width * height * sizeof(T));
 }
 
+template <class T>
+void save_i
