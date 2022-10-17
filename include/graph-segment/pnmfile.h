@@ -199,4 +199,4 @@ void load_image(image<T> **im, const char *name) {
 }
 
 template <class T>
-void save_i
+void save_image(image<T> *im, co
