@@ -199,4 +199,5 @@ void load_image(image<T> **im, const char *name) {
 }
 
 template <class T>
-void save_image(image<T> *im, co
+void save_image(image<T> *im, const char *name) {
+  int width 
