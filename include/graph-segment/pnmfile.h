@@ -202,4 +202,6 @@ template <class T>
 void save_image(image<T> *im, const char *name) {
   int width = im->width();
   int height = im->height();
-  std::ofstream file(name, std::ios:
+  std::ofstream file(name, std::ios::out | std::ios::binary);
+
+ 
