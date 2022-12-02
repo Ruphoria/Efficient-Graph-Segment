@@ -204,4 +204,4 @@ void save_image(image<T> *im, const char *name) {
   int height = im->height();
   std::ofstream file(name, std::ios::out | std::ios::binary);
 
- 
+  file << "VLIB\n"
