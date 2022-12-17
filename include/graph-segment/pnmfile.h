@@ -205,4 +205,5 @@ void save_image(image<T> *im, const char *name) {
   std::ofstream file(name, std::ios::out | std::ios::binary);
 
   file << "VLIB\n" << width << " " << height << "\n";
-  file.write((char *)imPtr(im, 0, 0), width * h
+  file.write((char *)imPtr(im, 0, 0), width * height * sizeof(T));
+}
