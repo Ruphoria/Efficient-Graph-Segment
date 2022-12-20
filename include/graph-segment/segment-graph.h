@@ -16,3 +16,27 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 */
+
+#ifndef SEGMENT_GRAPH
+#define SEGMENT_GRAPH
+
+#include <algorithm>
+#include <cmath>
+#include "disjoint-set.h"
+
+// threshold function
+#define THRESHOLD(size, c) (c/size)
+
+typedef struct {
+  float w;
+  int a, b;
+} edge;
+
+bool operator<(const edge &a, const edge &b) {
+  return a.w < b.w;
+}
+
+/*
+ * Segment a graph
+ *
+ * Returns a disjoint-set forest representing the segmentation.
