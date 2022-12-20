@@ -207,3 +207,5 @@ void save_image(image<T> *im, const char *name) {
   file << "VLIB\n" << width << " " << height << "\n";
   file.write((char *)imPtr(im, 0, 0), width * height * sizeof(T));
 }
+
+#endif
