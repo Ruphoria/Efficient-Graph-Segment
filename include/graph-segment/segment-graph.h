@@ -63,3 +63,22 @@ universe *segment_graph(int num_vertices, int num_edges, edge *edges,
   for (int i = 0; i < num_edges; i++) {
     edge *pedge = &edges[i];
     
+    // components conected by this edge
+    int a = u->find(pedge->a);
+    int b = u->find(pedge->b);
+    if (a != b) {
+      if ((pedge->w <= threshold[a]) &&
+	  (pedge->w <= threshold[b])) {
+	u->join(a, b);
+	a = u->find(a);
+	threshold[a] = pedge->w + THRESHOLD(u->size(a), c);
+      }
+    }
+  }
+
+  // free up
+  delete threshold;
+  return u;
+}
+
+#endif
