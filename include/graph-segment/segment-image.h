@@ -30,3 +30,25 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 rgb random_rgb(){ 
   rgb c;
   double r;
+  
+  c.r = (uchar)rand();
+  c.g = (uchar)rand();
+  c.b = (uchar)rand();
+
+  return c;
+}
+
+// dissimilarity measure between pixels
+static inline float diff(image<float> *r, image<float> *g, image<float> *b,
+			 int x1, int y1, int x2, int y2) {
+  return sqrt(square(imRef(r, x1, y1)-imRef(r, x2, y2)) +
+	      square(imRef(g, x1, y1)-imRef(g, x2, y2)) +
+	      square(imRef(b, x1, y1)-imRef(b, x2, y2)));
+}
+
+/*
+ * Segment an image
+ *
+ * Returns a color image representing the segmentation.
+ *
+ * im: image to segment.
