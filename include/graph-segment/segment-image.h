@@ -52,3 +52,26 @@ static inline float diff(image<float> *r, image<float> *g, image<float> *b,
  * Returns a color image representing the segmentation.
  *
  * im: image to segment.
+ * sigma: to smooth the image.
+ * c: constant for treshold function.
+ * min_size: minimum component size (enforced by post-processing stage).
+ * num_ccs: number of connected components in the segmentation.
+ */
+image<rgb> *segment_image(image<rgb> *im, float sigma, float c, int min_size,
+			  int *num_ccs) {
+  int width = im->width();
+  int height = im->height();
+
+  image<float> *r = new image<float>(width, height);
+  image<float> *g = new image<float>(width, height);
+  image<float> *b = new image<float>(width, height);
+
+  // smooth each color channel  
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+      imRef(r, x, y) = imRef(im, x, y).r;
+      imRef(g, x, y) = imRef(im, x, y).g;
+      imRef(b, x, y) = imRef(im, x, y).b;
+    }
+  }
+  image<float> *smooth_r = smooth(r, sigma);
