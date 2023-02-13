@@ -37,3 +37,13 @@ int main(int argc, char **argv) {
   printf("loading input image.\n");
   image<rgb> *input = loadPPM(argv[4]);
 	
+  printf("processing\n");
+  int num_ccs; 
+  image<rgb> *seg = segment_image(input, sigma, k, min_size, &num_ccs); 
+  savePPM(seg, argv[5]);
+
+  printf("got %d components\n", num_ccs);
+  printf("done! uff...thats hard work.\n");
+
+  return 0;
+}
