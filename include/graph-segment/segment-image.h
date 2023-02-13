@@ -103,3 +103,29 @@ image<rgb> *segment_image(image<rgb> *im, float sigma, float c, int min_size,
       if ((x < width-1) && (y < height-1)) {
 	edges[num].a = y * width + x;
 	edges[num].b = (y+1) * width + (x+1);
+	edges[num].w = diff(smooth_r, smooth_g, smooth_b, x, y, x+1, y+1);
+	num++;
+      }
+
+      if ((x < width-1) && (y > 0)) {
+	edges[num].a = y * width + x;
+	edges[num].b = (y-1) * width + (x+1);
+	edges[num].w = diff(smooth_r, smooth_g, smooth_b, x, y, x+1, y-1);
+	num++;
+      }
+    }
+  }
+  delete smooth_r;
+  delete smooth_g;
+  delete smooth_b;
+
+  // segment
+  universe *u = segment_graph(width*height, num, edges, c);
+  
+  // post process small components
+  for (int i = 0; i < num; i++) {
+    int a = u->find(edges[i].a);
+    int b = u->find(edges[i].b);
+    if ((a != b) && ((u->size(a) < min_size) || (u->size(b) < min_size)))
+      u->join(a, b);
+  }
