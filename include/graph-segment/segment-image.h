@@ -75,3 +75,31 @@ image<rgb> *segment_image(image<rgb> *im, float sigma, float c, int min_size,
     }
   }
   image<float> *smooth_r = smooth(r, sigma);
+  image<float> *smooth_g = smooth(g, sigma);
+  image<float> *smooth_b = smooth(b, sigma);
+  delete r;
+  delete g;
+  delete b;
+ 
+  // build graph
+  edge *edges = new edge[width*height*4];
+  int num = 0;
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+      if (x < width-1) {
+	edges[num].a = y * width + x;
+	edges[num].b = y * width + (x+1);
+	edges[num].w = diff(smooth_r, smooth_g, smooth_b, x, y, x+1, y);
+	num++;
+      }
+
+      if (y < height-1) {
+	edges[num].a = y * width + x;
+	edges[num].b = (y+1) * width + x;
+	edges[num].w = diff(smooth_r, smooth_g, smooth_b, x, y, x, y+1);
+	num++;
+      }
+
+      if ((x < width-1) && (y < height-1)) {
+	edges[num].a = y * width + x;
+	edges[num].b = (y+1) * width + (x+1);
