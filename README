@@ -1,4 +1,4 @@
 This repository is a new home for the segmentation algorithm, originally described in 'Efficient Graph-Based Image Segmentation, Pedro F. Felzenszwalb and Daniel P. Huttenlocher, International Journal of Computer Vision, 59(2) September 2004.'
 
 You may find additional details here http://cs.brown.edu/~pff/segment/
- The program accepts a color image (PPM format) and outputs a segmentation wi
+ The program accepts a color image (PPM format) and outputs a segmentation with a random color assigned 
