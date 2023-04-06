@@ -3,4 +3,5 @@ This repository is a new home for the segmentation algorithm, originally describ
 You may find additional details here http://cs.brown.edu/~pff/segment/
  The program accepts a color image (PPM format) and outputs a segmentation with a random color assigned to each region.
 
-Instruc
+Instructions:
+1) Run 'make' to compile 
