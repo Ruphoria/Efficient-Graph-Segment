@@ -5,4 +5,6 @@ You may find additional details here http://cs.brown.edu/~pff/segment/
 
 Instructions:
 1) Run 'make' to compile 'segment'.
-2) Execute 'segment sigma k min input outpu
+2) Execute 'segment sigma k min input output'.
+The parameters are:
+ sig
