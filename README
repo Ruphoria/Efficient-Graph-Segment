@@ -10,4 +10,5 @@ The parameters are:
  sigma: Used to smooth the input image before segmenting it.
  k: Value for the threshold function.
  min: Minimum component size enforced by post-processing.
- 
+ input: Input image.
+ o
