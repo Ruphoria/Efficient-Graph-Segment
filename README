@@ -8,4 +8,5 @@ Instructions:
 2) Execute 'segment sigma k min input output'.
 The parameters are:
  sigma: Used to smooth the input image before segmenting it.
- k: Value for the thr
+ k: Value for the threshold function.
+ min:
