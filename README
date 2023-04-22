@@ -11,4 +11,4 @@ The parameters are:
  k: Value for the threshold function.
  min: Minimum component size enforced by post-processing.
  input: Input image.
- o
+ output: Output ima
