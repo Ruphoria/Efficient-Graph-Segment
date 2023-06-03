@@ -13,4 +13,4 @@ The parameters are:
  input: Input image.
  output: Output image.
 
-Typically, parameters are sigma = 0.5, k = 500, min = 20. Larger values for 
+Typically, parameters are sigma = 0.5, k = 500, min = 20. Larger values for k will result in larger 
